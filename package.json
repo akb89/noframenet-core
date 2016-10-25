@@ -1,0 +1,40 @@
+{
+  "name": "noframenet-core",
+  "version": "0.0.1",
+  "description": "A set of core models and utils for handling a MongoDB-based FrameNet database",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill '*/test/**/*.@(js|jsx)' --reporter spec",
+    "lint": "`npm bin`/eslint . --ext .js --ext .jsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://akb89@github.com/akb89/noframenet-core.git"
+  },
+  "keywords": [
+    "FrameNet",
+    "MongoDB",
+    "Mongoose"
+  ],
+  "author": "Alexandre Kabbach",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akb89/noframenet-core/issues"
+  },
+  "homepage": "https://github.com/akb89/noframenet-core#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "collections": "^5.0.5",
+    "mongoose": "^4.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1"
+  }
+}
