@@ -14,6 +14,7 @@ import pattern from './models/pattern';
 import semTypes from './models/semType';
 import sentence from './models/sentence';
 import valenceUnit from './models/valenceUnit';
+import Set from './utils/utils';
 
 export default {
   annotationSet,
@@ -30,4 +31,5 @@ export default {
   semTypes,
   sentence,
   valenceUnit,
+  Set,
 };
