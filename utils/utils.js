@@ -5,6 +5,7 @@
  * collections/fast-set to handle FrameNet object comparison    *
  ****************************************************************/
 import FastSet from 'collections/fast-set';
+import mongoose from 'mongoose';
 
 /**
  * Custom hashCode method on String.prototype
@@ -16,7 +17,7 @@ if (!String.prototype.hashCode) {
     // return murmur.murmur3(this, 42);
     // return murmur.murmur2(this, 42);
     // return murmur3.hash128(this).raw();
-    // Tried all of the above but below is the fastest
+    // Tried all of the above but below one is the fastest
     let hash = 0;
     if (this.length === 0) return hash;
     for (let i = 0; i < this.length; i += 1) {
@@ -28,20 +29,38 @@ if (!String.prototype.hashCode) {
   };
 }
 
+/**
+ * An equals method based on Mongoose _id.equals method
+ * @method equals
+ * @param  {[type]} a a given Mongoose object with an _id attribute
+ * @param  {[type]} b a given Mongoose object with an _id attribute
+ * @return {[boolean]} true if a and b have the same _id, false
+ * otherwise
+ */
 function equals(a, b) {
-  return a._id.equals(b._id);
+  return a._id instanceof mongoose.Types.ObjectId ? a._id.equals(b._id) : a._id === b._id;
 }
 
+/**
+ * A custom hashcode for {@link Set}
+ * @method hashCode
+ * @param  {[type]} object a given Mongoose object with an _id
+ * attribute
+ * @return {[String]} stringified _id
+ */
 function hashCode(object) {
   return object._id.toString();
 }
 
 /**
- * A Set of (Mongoose) objects. Equals and hashcode are based on the
- * _id parameter and the Mongoose equals method
+ * A Set of (Mongoose) objects extending collectionjs/FastSet. Equals
+ * and hashcode are based on the _id parameter and the Mongoose
+ * equals method
  */
-export class Set extends FastSet { // FIXME: export default class
+class Set extends FastSet {
   constructor(collection) {
     super(collection, equals, hashCode);
   }
 }
+
+export default Set;
