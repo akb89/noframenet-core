@@ -51,6 +51,20 @@
       {
         "exceptions": ["*"]
       }
+    ],
+    // Allow uppercase functions with mongoose
+    new-cap: [
+      "error",
+      {
+        "capIsNewExceptions": ["mongoose.Schema", "mongoose.Types.ObjectId"]
+      }
+    ],
+    // Ignore unused-var error message on chai.should()
+    no-unused-vars: [
+      "error",
+      {
+        "varsIgnorePattern": "should" 
+      }
     ]
   }
 }

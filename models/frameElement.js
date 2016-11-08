@@ -8,49 +8,49 @@ mongoose.Promise = bluebird;
 const frameElementSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true
+    unique: true,
   },
   name: {
     type: String,
-    index: true
+    index: true,
   },
   definition: {
-    type: String
+    type: String,
   },
   coreType: {
-    type: String
+    type: String,
   },
   cDate: {
-    type: String
+    type: String,
   },
   cBy: {
-    type: String
+    type: String,
   },
   fgColor: {
-    type: String
+    type: String,
   },
   bgColor: {
-    type: String
+    type: String,
   },
   abbrev: {
     type: String,
-    index: true
+    index: true,
   },
   feRelations: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'FERelation'
+    ref: 'FERelation',
   }],
   semTypes: [{
     type: Number,
-    ref: 'SemType'
+    ref: 'SemType',
   }],
 });
 
 frameElementSchema.index({
-  feRelations: 1
+  feRelations: 1,
 });
 frameElementSchema.index({
-  semTypes: 1
+  semTypes: 1,
 });
 
 export default mongoose.model('FrameElement', frameElementSchema);

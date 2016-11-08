@@ -12,47 +12,47 @@ const lexUnitSchema = mongoose.Schema({
   },
   name: {
     type: String,
-    index: true
+    index: true,
   },
   pos: {
     type: String,
-    index: true
+    index: true,
   },
   definition: {
-    type: String
+    type: String,
   },
   frame: {
     type: Number,
     ref: 'Frame',
-    index: true
+    index: true,
   },
   status: {
     type: String,
-    index: true
+    index: true,
   },
   totalAnnotated: {
     type: Number,
-    index: true
+    index: true,
   },
   lemma_id: {
     type: Number,
-    index: true
+    index: true,
   },
   lexemes: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Lexeme'
+    ref: 'Lexeme',
   }],
   semTypes: [{
     type: Number,
-    ref: 'SemType'
+    ref: 'SemType',
   }],
 });
 
 lexUnitSchema.index({
-  lexemes: 1
+  lexemes: 1,
 });
 lexUnitSchema.index({
-  semTypes: 1
+  semTypes: 1,
 });
 
 export default mongoose.model('LexUnit', lexUnitSchema);

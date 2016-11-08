@@ -31,7 +31,7 @@ const frameSchema = mongoose.Schema({
     [{
       type: Number,
       ref: 'FrameElement',
-    }]
+    }],
   ],
   frameRelations: [{
     type: mongoose.Schema.Types.ObjectId,

@@ -28,19 +28,20 @@ const frameRelationSchema = mongoose.Schema({
 });
 
 // TODO: Refactor this
+/*
 const frameRelationSchema = mongoose.Schema({
   type: {
     type: String,
-    index: true
+    index: true,
   },
   frames: [{
     type: Number,
-    ref: 'Frame'
+    ref: 'Frame',
   }],
 });
-
+*/
 frameRelationSchema.index({
-  frames: 1
+  frames: 1,
 });
 
 export default mongoose.model('FrameRelation', frameRelationSchema);

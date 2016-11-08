@@ -8,7 +8,7 @@ mongoose.Promise = bluebird;
 const frameElementRelationSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true
+    unique: true,
   },
   subFE: {
     type: mongoose.Schema.Types.ObjectId,
@@ -28,19 +28,20 @@ const frameElementRelationSchema = mongoose.Schema({
 });
 
 // TODO: Refactor this
+/*
 const frameElementRelationSchema = mongoose.Schema({
   type: {
     type: String,
-    index: true
+    index: true,
   },
   frameElements: [{
     type: Number,
-    ref: 'FrameElement'
+    ref: 'FrameElement',
   }],
 });
-
+*/
 frameElementRelationSchema.index({
-  frameElements: 1
+  frameElements: 1,
 });
 
 export default mongoose.model('FERelation', frameElementRelationSchema);

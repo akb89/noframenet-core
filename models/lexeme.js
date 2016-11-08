@@ -8,21 +8,21 @@ mongoose.Promise = bluebird;
 const lexemeSchema = mongoose.Schema({
   name: {
     type: String,
-    index: true
+    index: true,
   },
   pos: {
     type: String,
-    index: true
+    index: true,
   },
   headword: {
     type: String,
-    index: true
+    index: true,
   },
   order: {
-    type: Number
+    type: Number,
   },
   breakBefore: {
-    type: String
+    type: String,
   },
 });
 

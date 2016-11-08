@@ -8,17 +8,17 @@ mongoose.Promise = bluebird;
 const labelSchema = mongoose.Schema({
   name: {
     type: String,
-    index: true
+    index: true,
   },
   type: {
     type: String,
-    index: true
+    index: true,
   },
   startPos: {
-    type: Number
+    type: Number,
   },
   endPos: {
-    type: Number
+    type: Number,
   },
 });
 

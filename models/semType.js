@@ -8,14 +8,14 @@ mongoose.Promise = bluebird;
 const semTypeModelSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true
+    unique: true,
   },
   name: {
     type: String,
-    index: true
+    index: true,
   },
   definition: {
-    type: String
+    type: String,
   },
 });
 
