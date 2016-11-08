@@ -17,6 +17,10 @@ const semTypeModelSchema = mongoose.Schema({
   definition: {
     type: String,
   },
+  superTypes: [{
+    type: Number,
+    ref: 'SemType',
+  }],
 });
 
 export default mongoose.model('SemType', semTypeModelSchema);
