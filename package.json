@@ -1,18 +1,7 @@
 {
   "name": "noframenet-core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A set of core models and utils for handling a MongoDB-based FrameNet database",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill './tests/**/*.@(js)' --reporter spec",
-    "lint": "`npm bin`/eslint . --ext .js "
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://akb89@github.com/akb89/noframenet-core.git"
-  },
   "keywords": [
     "FrameNet",
     "MongoDB",
@@ -20,10 +9,18 @@
   ],
   "author": "Alexandre Kabbach",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill './tests/**/*.@(js)' --reporter spec",
+    "lint": "`npm bin`/eslint . --ext .js "
+  },
+  "homepage": "https://github.com/akb89/noframenet-core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://akb89@github.com/akb89/noframenet-core.git"
+  },
   "bugs": {
     "url": "https://github.com/akb89/noframenet-core/issues"
   },
-  "homepage": "https://github.com/akb89/noframenet-core#readme",
   "dependencies": {
     "bluebird": "^3.4.6",
     "collections": "^5.0.5",
