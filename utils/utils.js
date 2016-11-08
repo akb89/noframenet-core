@@ -12,12 +12,6 @@ import mongoose from 'mongoose';
  */
 if (!String.prototype.hashCode) {
   String.prototype.hashCode = () => {
-    // return jenkins.oaat(this);
-    // return jenkins.lookup2(this);
-    // return murmur.murmur3(this, 42);
-    // return murmur.murmur2(this, 42);
-    // return murmur3.hash128(this).raw();
-    // Tried all of the above but below one is the fastest
     let hash = 0;
     if (this.length === 0) return hash;
     for (let i = 0; i < this.length; i += 1) {
@@ -30,7 +24,8 @@ if (!String.prototype.hashCode) {
 }
 
 /**
- * An equals method based on Mongoose _id.equals method
+ * An equals method performing a Mongoose _id.equals comparison if _id is of
+ * type ObjectId and a standard === comparisong otherwise.
  * @method equals
  * @param  {[type]} a a given Mongoose object with an _id attribute
  * @param  {[type]} b a given Mongoose object with an _id attribute
@@ -53,9 +48,7 @@ function hashCode(object) {
 }
 
 /**
- * A Set of (Mongoose) objects extending collectionjs/FastSet. Equals
- * and hashcode are based on the _id parameter and the Mongoose
- * equals method
+ * A Set of (Mongoose) objects extending collectionjs/FastSet.
  */
 class Set extends FastSet {
   constructor(collection) {

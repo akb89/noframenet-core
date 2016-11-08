@@ -2,12 +2,11 @@
   "name": "noframenet-core",
   "version": "0.0.1",
   "description": "A set of core models and utils for handling a MongoDB-based FrameNet database",
-  "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill './tests/**/*.@(js|jsx)' --reporter spec",
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill './tests/**/*.@(js)' --reporter spec",
     "lint": "`npm bin`/eslint . --ext .js "
   },
   "repository": {
