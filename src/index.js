@@ -9,7 +9,7 @@ import label from './models/label';
 import lexeme from './models/lexeme';
 import lexUnit from './models/lexUnit';
 import pattern from './models/pattern';
-import semTypes from './models/semType';
+import semType from './models/semType';
 import sentence from './models/sentence';
 import valenceUnit from './models/valenceUnit';
 import Set from './utils/utils';
@@ -26,7 +26,7 @@ export default {
   lexeme,
   lexUnit,
   pattern,
-  semTypes,
+  semType,
   sentence,
   valenceUnit,
   Set,
