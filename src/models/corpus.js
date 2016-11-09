@@ -1,11 +1,9 @@
-'use strict';
-
 import mongoose from 'mongoose';
 import bluebird from 'bluebird';
 
 mongoose.Promise = bluebird;
 
-const semTypeModelSchema = mongoose.Schema({
+const corpusSchema = mongoose.Schema({
   _id: {
     type: Number,
     unique: true,
@@ -14,13 +12,17 @@ const semTypeModelSchema = mongoose.Schema({
     type: String,
     index: true,
   },
-  definition: {
+  description: {
     type: String,
   },
-  superTypes: [{
+  documents: [{
     type: Number,
-    ref: 'SemType',
+    ref: 'Document',
   }],
 });
 
-export default mongoose.model('SemType', semTypeModelSchema);
+corpusSchema.index({
+  documents: 1,
+});
+
+export default mongoose.model('Corpus', corpusSchema);

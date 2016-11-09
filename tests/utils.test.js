@@ -1,9 +1,7 @@
-'use strict';
-
 import chai from 'chai';
 import mongoose from 'mongoose';
 import bluebird from 'bluebird';
-import Set from './../utils/utils';
+import Set from './../src/utils/utils';
 
 mongoose.Promise = bluebird;
 const should = chai.should();

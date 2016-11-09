@@ -1,24 +1,24 @@
-'use strict';
-
 import mongoose from 'mongoose';
 import bluebird from 'bluebird';
 
 mongoose.Promise = bluebird;
 
-const frameRelationTypeSchema = mongoose.Schema({
+const semTypeModelSchema = mongoose.Schema({
   _id: {
     type: Number,
     unique: true,
   },
   name: {
     type: String,
+    index: true,
   },
-  subFrameName: {
+  definition: {
     type: String,
   },
-  supFrameName: {
-    type: String,
-  },
+  superTypes: [{
+    type: Number,
+    ref: 'SemType',
+  }],
 });
 
-export default mongoose.model('FrameRelationType', frameRelationTypeSchema);
+export default mongoose.model('SemType', semTypeModelSchema);

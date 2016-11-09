@@ -1,5 +1,3 @@
-'use strict';
-
 /****************************************************************
  * Utility classes to define custom 'Set' objects extending     *
  * collections/fast-set to handle FrameNet object comparison    *

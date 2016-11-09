@@ -1,29 +1,28 @@
-'use strict';
-
 import mongoose from 'mongoose';
 import bluebird from 'bluebird';
 
 mongoose.Promise = bluebird;
 
-const lexemeSchema = mongoose.Schema({
-  name: {
+const valenceUnitSchema = mongoose.Schema({
+  FE: {
     type: String,
     index: true,
   },
-  pos: {
+  PT: {
     type: String,
     index: true,
   },
-  headword: {
+  GF: {
     type: String,
     index: true,
-  },
-  order: {
-    type: Number,
-  },
-  breakBefore: {
-    type: String,
   },
 });
+valenceUnitSchema.index({
+  FE: 1,
+  PT: 1,
+  GF: 1,
+}, {
+  unique: true,
+});
 
-export default mongoose.model('Lexeme', lexemeSchema);
+export default mongoose.model('ValenceUnit', valenceUnitSchema);

@@ -1,5 +1,3 @@
-'use strict';
-
 import annotationSet from './models/annotationSet';
 import corpus from './models/corpus';
 import document from './models/document';

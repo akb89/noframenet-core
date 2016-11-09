@@ -1,25 +1,27 @@
-'use strict';
-
 import mongoose from 'mongoose';
 import bluebird from 'bluebird';
 
 mongoose.Promise = bluebird;
 
-const labelSchema = mongoose.Schema({
+const lexemeSchema = mongoose.Schema({
   name: {
     type: String,
     index: true,
   },
-  type: {
+  pos: {
     type: String,
     index: true,
   },
-  startPos: {
+  headword: {
+    type: String,
+    index: true,
+  },
+  order: {
     type: Number,
   },
-  endPos: {
-    type: Number,
+  breakBefore: {
+    type: String,
   },
 });
 
-export default mongoose.model('Label', labelSchema);
+export default mongoose.model('Lexeme', lexemeSchema);
