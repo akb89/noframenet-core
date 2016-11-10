@@ -3,7 +3,7 @@ import bluebird from 'bluebird';
 
 mongoose.Promise = bluebird;
 
-const frameElementRelationSchema = mongoose.Schema({
+const feRelationSchema = mongoose.Schema({
   _id: {
     type: Number,
     unique: true,
@@ -24,8 +24,8 @@ const frameElementRelationSchema = mongoose.Schema({
     index: true,
   },
 });
-frameElementRelationSchema.index({
+feRelationSchema.index({
   frameElements: 1,
 });
 
-export default mongoose.model('FERelation', frameElementRelationSchema);
+export default mongoose.model('FERelation', feRelationSchema);

@@ -19,9 +19,9 @@ export {
 }
 from './models/frameElement';
 export {
-  default as FrameElementRelation,
+  default as FERelation,
 }
-from './models/frameElementRelation';
+from './models/feRelation';
 export {
   default as FrameRelation,
 }
