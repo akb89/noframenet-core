@@ -9,35 +9,22 @@ const frameRelationSchema = mongoose.Schema({
     unique: true,
   },
   subFrame: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Number,
     ref: 'Frame',
     index: true,
   },
   supFrame: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Number,
     ref: 'Frame',
     index: true,
   },
   type: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Number,
     ref: 'FrameRelationType',
     index: true,
   },
 });
 
-// TODO: Refactor this
-/*
-const frameRelationSchema = mongoose.Schema({
-  type: {
-    type: String,
-    index: true,
-  },
-  frames: [{
-    type: Number,
-    ref: 'Frame',
-  }],
-});
-*/
 frameRelationSchema.index({
   frames: 1,
 });

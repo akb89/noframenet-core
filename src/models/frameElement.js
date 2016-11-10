@@ -17,6 +17,7 @@ const frameElementSchema = mongoose.Schema({
   },
   coreType: {
     type: String,
+    index: true,
   },
   cDate: {
     type: String,
@@ -34,13 +35,20 @@ const frameElementSchema = mongoose.Schema({
     type: String,
     index: true,
   },
-  feRelations: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'FERelation',
+  requires: [{
+    type: Number,
+    ref: 'FrameElement',
+    index: true,
+  }],
+  excludes: [{
+    type: Number,
+    ref: 'FrameElement',
+    index: true,
   }],
   semTypes: [{
     type: Number,
     ref: 'SemType',
+    index: true,
   }],
 });
 
