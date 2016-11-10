@@ -18,6 +18,7 @@ const semTypeModelSchema = mongoose.Schema({
   superTypes: [{
     type: Number,
     ref: 'SemType',
+    index: true,
   }],
 });
 
