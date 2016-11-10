@@ -27,6 +27,10 @@ export {
 }
 from './models/frameRelation';
 export {
+  default as FrameRelationType,
+}
+from './models/frameRelationType';
+export {
   default as Label,
 }
 from './models/label';
