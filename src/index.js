@@ -1,33 +1,60 @@
-import annotationSet from './models/annotationSet';
-import corpus from './models/corpus';
-import document from './models/document';
-import frame from './models/frame';
-import frameElement from './models/frameElement';
-import frameElementRelation from './models/frameElementRelation';
-import frameRelation from './models/frameRelation';
-import label from './models/label';
-import lexeme from './models/lexeme';
-import lexUnit from './models/lexUnit';
-import pattern from './models/pattern';
-import semType from './models/semType';
-import sentence from './models/sentence';
-import valenceUnit from './models/valenceUnit';
-import Set from './utils/utils';
-
-export default {
-  annotationSet,
-  corpus,
-  document,
-  frame,
-  frameElement,
-  frameElementRelation,
-  frameRelation,
-  label,
-  lexeme,
-  lexUnit,
-  pattern,
-  semType,
-  sentence,
-  valenceUnit,
-  Set,
-};
+export {
+  default as AnnotationSet,
+}
+from './models/annotationSet';
+export {
+  default as Corpus,
+}
+from './models/corpus';
+export {
+  default as Document,
+}
+from './models/document';
+export {
+  default as Frame,
+}
+from './models/frame';
+export {
+  default as FrameElement,
+}
+from './models/frameElement';
+export {
+  default as FrameElementRelation,
+}
+from './models/frameElementRelation';
+export {
+  default as FrameRelation,
+}
+from './models/frameRelation';
+export {
+  default as Label,
+}
+from './models/label';
+export {
+  default as Lexeme,
+}
+from './models/lexeme';
+export {
+  default as LexUnit,
+}
+from './models/lexUnit';
+export {
+  default as Pattern,
+}
+from './models/pattern';
+export {
+  default as SemType,
+}
+from './models/semType';
+export {
+  default as Sentence,
+}
+from './models/sentence';
+export {
+  default as ValenceUnit,
+}
+from './models/valenceUnit';
+export {
+  default as Set,
+}
+from './utils/utils';
