@@ -1,6 +1,6 @@
 {
   "name": "noframenet-core",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A set of core models and utils for handling a MongoDB-based FrameNet database",
   "keywords": [
     "FrameNet",
@@ -39,7 +39,7 @@
     "eslint": "^3.8.1",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1"
   }
 }
