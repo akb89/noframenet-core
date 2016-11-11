@@ -11,10 +11,11 @@
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint . --ext .js",
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill './tests/**/*.@(js)' --reporter spec",
-    "lint": "`npm bin`/eslint . --ext .js",
+    "posttest": "npm run lint",
     "build": "./node_modules/.bin/babel --presets es2015,stage-0 src/ --out-dir lib/",
-    "prepublish": "rm -rf lib/ && npm run build"
+    "prepublish": "npm run test && rm -rf lib/ && npm run build"
   },
   "homepage": "https://github.com/akb89/noframenet-core#readme",
   "repository": {
