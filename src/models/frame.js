@@ -31,10 +31,6 @@ const frameSchema = mongoose.Schema({
       ref: 'FrameElement',
     }],
   ],
-  frameRelations: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'FrameRelation',
-  }],
   lexUnits: [{
     type: Number,
     ref: 'LexUnit',
