@@ -32,23 +32,17 @@ const lexUnitSchema = mongoose.Schema({
     type: Number,
     index: true,
   },
-  lemma_id: {
+  lemma: {
     type: Number,
+    ref: 'Lemma',
     index: true,
   },
-  lexemes: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Lexeme',
-  }],
   semTypes: [{
     type: Number,
     ref: 'SemType',
   }],
 });
 
-lexUnitSchema.index({
-  lexemes: 1,
-});
 lexUnitSchema.index({
   semTypes: 1,
 });
