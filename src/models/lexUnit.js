@@ -19,6 +19,9 @@ const lexUnitSchema = mongoose.Schema({
   definition: {
     type: String,
   },
+  lemmaID: {
+    type: Number,
+  },
   frame: {
     type: Number,
     ref: 'Frame',
@@ -28,15 +31,10 @@ const lexUnitSchema = mongoose.Schema({
     type: String,
     index: true,
   },
-  totalAnnotated: {
+  lexemes: [{
     type: Number,
-    index: true,
-  },
-  lemma: {
-    type: Number,
-    ref: 'Lemma',
-    index: true,
-  },
+    ref: 'Lexeme',
+  }],
   semTypes: [{
     type: Number,
     ref: 'SemType',
