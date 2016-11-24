@@ -19,10 +19,10 @@ const frameElementSchema = mongoose.Schema({
     type: String,
     index: true,
   },
-  cDate: {
+  cBy: {
     type: String,
   },
-  cBy: {
+  cDate: {
     type: String,
   },
   fgColor: {

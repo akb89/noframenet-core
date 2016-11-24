@@ -15,10 +15,10 @@ const frameSchema = mongoose.Schema({
   definition: {
     type: String,
   },
-  cDate: {
+  cBy: {
     type: String,
   },
-  cBy: {
+  cDate: {
     type: String,
   },
   frameElements: [{

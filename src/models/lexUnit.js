@@ -31,8 +31,14 @@ const lexUnitSchema = mongoose.Schema({
     type: String,
     index: true,
   },
+  cBy: {
+    type: String,
+  },
+  cDate: {
+    type: String,
+  },
   lexemes: [{
-    type: Number,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Lexeme',
   }],
   semTypes: [{
