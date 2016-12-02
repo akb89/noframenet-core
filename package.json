@@ -1,6 +1,6 @@
 {
   "name": "noframenet-core",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A set of core models and utils for handling a MongoDB-based FrameNet database",
   "keywords": [
     "FrameNet",
