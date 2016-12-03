@@ -12,6 +12,5 @@ export { default as LexUnit } from './models/lexUnit';
 export { default as Pattern } from './models/pattern';
 export { default as SemType } from './models/semType';
 export { default as Sentence } from './models/sentence';
-export { default as TMPattern } from './models/tmpattern';
 export { default as ValenceUnit } from './models/valenceUnit';
 export { default as Set } from './utils/utils';
