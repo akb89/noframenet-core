@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import bluebird from 'bluebird';
 
+
 mongoose.Promise = bluebird;
 
 const documentSchema = mongoose.Schema({

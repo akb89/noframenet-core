@@ -1,4 +1,5 @@
 export { default as AnnotationSet } from './models/annotationSet';
+
 export { default as Corpus } from './models/corpus';
 export { default as Document } from './models/document';
 export { default as Frame } from './models/frame';
