@@ -5,7 +5,6 @@
 import FastSet from 'collections/fast-set';
 import mongoose from 'mongoose';
 
-
 /**
  * Custom hashCode method on String.prototype
  */

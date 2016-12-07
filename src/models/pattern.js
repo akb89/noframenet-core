@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 import bluebird from 'bluebird';
 import './valenceUnit';
 
-
 mongoose.Promise = bluebird;
 
 const patternSchema = mongoose.Schema({
