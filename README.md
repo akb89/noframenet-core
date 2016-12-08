@@ -1,13 +1,13 @@
 # NoFrameNet-Core
-A set of core Mongoose models and utils for handling FrameNet data on a MongoDB database.
-
 [![NPM version][npm-version-image]][npm-url]
 [![NPM downloads][npm-downloads-image]][npm-url]
 [![Dependencies][david-dep-image]][david-url]
 [![MIT License][license-image]][license-url]
 [![FrameNet][framenet-image]][framenet-url]
 
-If you are looking for a solution to import FrameNet data to a MongoDB database, check out [NoFrameNet](https://github.com/akb89/noframenet)
+A set of core Mongoose models and utils for handling FrameNet data on a MongoDB database.
+
+_If you are looking for a solution to import FrameNet data to a MongoDB database, check out [NoFrameNet](https://github.com/akb89/noframenet)_
 
 ## Install
 ```shell
