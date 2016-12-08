@@ -6,6 +6,8 @@ A set of core Mongoose models and utils for handling FrameNet data on a MongoDB 
 [![MIT License][license-image]][license-url]
 [![FrameNet][framenet-image]][framenet-url]
 
+If you are looking for a solution to import FrameNet data to a MongoDB database, check out [NoFrameNet](https://github.com/akb89/noframenet)
+
 ## Install
 ```shell
 $ npm install --save noframenet-core
@@ -46,3 +48,9 @@ NoFrameNet-Core's `Set` extends collectionjs' [FastSet](http://www.collectionsjs
 [framenet-url]:https://framenet.icsi.berkeley.edu/fndrupal
 [license-image]:http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
 [license-url]:LICENSE.txt
+
+## FrameNet Version Compatibility
+NoFrameNet-Core models are compatible with FrameNet version:
+- 1.5
+- 1.6
+- 1.7
