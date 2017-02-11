@@ -47,7 +47,7 @@ NoFrameNet-Core models are compatible with FrameNet version:
 [npm-version-image]:https://img.shields.io/npm/v/noframenet-core.svg?style=flat-square
 [npm-downloads-image]:https://img.shields.io/npm/dt/noframenet-core.svg?style=flat-square
 [npm-url]:https://www.npmjs.com/package/noframenet-core
-[framenet-image]:https://img.shields.io/badge/FrameNet-%3E%3D1.5-blue.svg?style=flat-square
+[framenet-image]:https://img.shields.io/badge/framenet-1.5%E2%87%A1-blue.svg?style=flat-square
 [framenet-url]:https://framenet.icsi.berkeley.edu/fndrupal
 [license-image]:http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
 [license-url]:LICENSE.txt
