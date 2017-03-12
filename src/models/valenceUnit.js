@@ -5,7 +5,8 @@ mongoose.Promise = bluebird;
 
 const valenceUnitSchema = mongoose.Schema({
   FE: {
-    type: String,
+    type: Number,
+    ref: 'FrameElement',
     index: true,
   },
   PT: {

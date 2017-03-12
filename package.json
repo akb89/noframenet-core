@@ -1,6 +1,6 @@
 {
   "name": "noframenet-core",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "A set of core Mongoose models and utils for handling FrameNet data on a MongoDB database",
   "keywords": [
     "FrameNet",
@@ -26,9 +26,9 @@
     "url": "https://github.com/akb89/noframenet-core/issues"
   },
   "dependencies": {
-    "bluebird": "^3.4.6",
+    "bluebird": "^3.5.0",
     "collections": "^5.0.5",
-    "mongoose": "^4.7.0"
+    "mongoose": "^4.8.0"
   },
   "devDependencies": {
     "babel-core": "^6.18.0",
@@ -37,9 +37,9 @@
     "babel-preset-stage-0": "^6.16.0",
     "chai": "^3.5.0",
     "eslint": "^3.11.0",
-    "eslint-config-airbnb": "^13.0.0",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.7.1",
     "mocha": "^3.2.0"
   }
