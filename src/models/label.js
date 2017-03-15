@@ -12,6 +12,9 @@ const labelSchema = mongoose.Schema({
     type: String,
     index: true,
   },
+  rank: {
+    type: Number,
+  },
   startPos: {
     type: Number,
   },
