@@ -9,12 +9,15 @@ const frameRelationTypeSchema = mongoose.Schema({
   },
   name: {
     type: String,
+    index: true,
   },
   subFrameName: {
     type: String,
+    index: true,
   },
   supFrameName: {
     type: String,
+    index: true,
   },
 });
 

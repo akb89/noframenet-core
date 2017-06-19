@@ -37,31 +37,30 @@ const frameElementSchema = mongoose.Schema({
   requires: [{
     type: Number,
     ref: 'FrameElement',
-    index: true,
   }],
   excludes: [{
     type: Number,
     ref: 'FrameElement',
-    index: true,
   }],
   semTypes: [{
     type: Number,
     ref: 'SemType',
-    index: true,
   }],
 });
 
 frameElementSchema.index({
-  _id: 1,
-}, {
-  unique: true,
+  requires: 1,
 });
-
 frameElementSchema.index({
-  feRelations: 1,
+  excludes: 1,
 });
 frameElementSchema.index({
   semTypes: 1,
+});
+frameElementSchema.index({
+  _id: 1,
+}, {
+  unique: true,
 });
 
 export default mongoose.model('FrameElement', frameElementSchema);

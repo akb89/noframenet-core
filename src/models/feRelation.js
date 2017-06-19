@@ -30,8 +30,4 @@ feRelationSchema.index({
   unique: true,
 });
 
-feRelationSchema.index({
-  frameElements: 1,
-});
-
 export default mongoose.model('FERelation', feRelationSchema);

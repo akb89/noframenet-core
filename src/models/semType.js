@@ -17,10 +17,12 @@ const semTypeSchema = mongoose.Schema({
   superTypes: [{
     type: Number,
     ref: 'SemType',
-    index: true,
   }],
 });
 
+semTypeSchema.index({
+  superTypes: 1,
+});
 semTypeSchema.index({
   _id: 1,
 }, {

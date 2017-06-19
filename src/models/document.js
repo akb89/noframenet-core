@@ -21,13 +21,12 @@ const documentSchema = mongoose.Schema({
 });
 
 documentSchema.index({
+  sentences: 1,
+});
+documentSchema.index({
   _id: 1,
 }, {
   unique: true,
-});
-
-documentSchema.index({
-  sentences: 1,
 });
 
 export default mongoose.model('Document', documentSchema);

@@ -41,23 +41,21 @@ const frameSchema = mongoose.Schema({
 });
 
 frameSchema.index({
-  _id: 1,
-}, {
-  unique: true,
-});
-
-frameSchema.index({
   frameElements: 1,
 });
 frameSchema.index({
   feCoreSets: 1,
 });
 frameSchema.index({
-  frameRelations: 1,
+  lexUnits: 1,
 });
 frameSchema.index({
   semTypes: 1,
 });
-// No index on lexUnits as a lexUnit is frame-specific
+frameSchema.index({
+  _id: 1,
+}, {
+  unique: true,
+});
 
 export default mongoose.model('Frame', frameSchema);

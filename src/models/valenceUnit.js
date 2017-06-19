@@ -21,20 +21,20 @@ const valenceUnitSchema = mongoose.Schema({
 valenceUnitSchema.index({
   FE: 1,
   PT: 1,
+});
+valenceUnitSchema.index({
+  FE: 1,
+  GF: 1,
+});
+valenceUnitSchema.index({
+  PT: 1,
+  GF: 1,
+});
+valenceUnitSchema.index({
+  FE: 1,
+  PT: 1,
   GF: 1,
 }, {
   unique: true,
-});
-valenceUnitSchema.index({
-  FE: 1,
-  PT: 1,
-});
-valenceUnitSchema.index({
-  FE: 1,
-  GF: 1,
-});
-valenceUnitSchema.index({
-  PT: 1,
-  GF: 1,
 });
 export default mongoose.model('ValenceUnit', valenceUnitSchema);

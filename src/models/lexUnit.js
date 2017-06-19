@@ -20,6 +20,7 @@ const lexUnitSchema = mongoose.Schema({
   },
   lemmaID: {
     type: Number,
+    index: true,
   },
   frame: {
     type: Number,
@@ -47,13 +48,15 @@ const lexUnitSchema = mongoose.Schema({
 });
 
 lexUnitSchema.index({
+  lexemes: 1,
+});
+lexUnitSchema.index({
+  semTypes: 1,
+});
+lexUnitSchema.index({
   _id: 1,
 }, {
   unique: true,
-});
-
-lexUnitSchema.index({
-  semTypes: 1,
 });
 
 export default mongoose.model('LexUnit', lexUnitSchema);

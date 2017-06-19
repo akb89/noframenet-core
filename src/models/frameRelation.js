@@ -30,8 +30,4 @@ frameRelationSchema.index({
   unique: true,
 });
 
-frameRelationSchema.index({
-  frames: 1,
-});
-
 export default mongoose.model('FrameRelation', frameRelationSchema);
