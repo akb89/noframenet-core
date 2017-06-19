@@ -6,7 +6,6 @@ mongoose.Promise = bluebird;
 const sentenceSchema = mongoose.Schema({ // eslint-disable-line new-cap
   _id: {
     type: Number,
-    unique: true,
   },
   text: {
     type: String,
@@ -22,6 +21,12 @@ const sentenceSchema = mongoose.Schema({ // eslint-disable-line new-cap
   aPos: {
     type: Number,
   },
+});
+
+sentenceSchema.index({
+  _id: 1,
+}, {
+  unique: true,
 });
 
 export default mongoose.model('Sentence', sentenceSchema);

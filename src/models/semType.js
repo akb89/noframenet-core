@@ -3,10 +3,9 @@ import bluebird from 'bluebird';
 
 mongoose.Promise = bluebird;
 
-const semTypeModelSchema = mongoose.Schema({
+const semTypeSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true,
   },
   name: {
     type: String,
@@ -22,4 +21,10 @@ const semTypeModelSchema = mongoose.Schema({
   }],
 });
 
-export default mongoose.model('SemType', semTypeModelSchema);
+semTypeSchema.index({
+  _id: 1,
+}, {
+  unique: true,
+});
+
+export default mongoose.model('SemType', semTypeSchema);

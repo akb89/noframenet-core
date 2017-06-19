@@ -6,7 +6,6 @@ mongoose.Promise = bluebird;
 const corpusSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true,
   },
   name: {
     type: String,
@@ -19,6 +18,12 @@ const corpusSchema = mongoose.Schema({
     type: Number,
     ref: 'Document',
   }],
+});
+
+corpusSchema.index({
+  _id: 1,
+}, {
+  unique: true,
 });
 
 corpusSchema.index({

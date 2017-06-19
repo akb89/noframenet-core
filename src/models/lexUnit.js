@@ -6,7 +6,6 @@ mongoose.Promise = bluebird;
 const lexUnitSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true,
   },
   name: {
     type: String,
@@ -45,6 +44,12 @@ const lexUnitSchema = mongoose.Schema({
     type: Number,
     ref: 'SemType',
   }],
+});
+
+lexUnitSchema.index({
+  _id: 1,
+}, {
+  unique: true,
 });
 
 lexUnitSchema.index({

@@ -6,7 +6,6 @@ mongoose.Promise = bluebird;
 const documentSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true,
   },
   name: {
     type: String,
@@ -19,6 +18,12 @@ const documentSchema = mongoose.Schema({
     type: Number,
     ref: 'Sentence',
   }],
+});
+
+documentSchema.index({
+  _id: 1,
+}, {
+  unique: true,
 });
 
 documentSchema.index({

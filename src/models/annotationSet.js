@@ -6,7 +6,6 @@ mongoose.Promise = bluebird;
 const annoSetSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true,
   },
   sentence: {
     type: Number,
@@ -27,6 +26,12 @@ const annoSetSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Label',
   }],
+});
+
+annoSetSchema.index({
+  _id: 1,
+}, {
+  unique: true,
 });
 
 export default mongoose.model('AnnotationSet', annoSetSchema);

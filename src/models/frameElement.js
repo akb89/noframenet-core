@@ -6,7 +6,6 @@ mongoose.Promise = bluebird;
 const frameElementSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true,
   },
   name: {
     type: String,
@@ -50,6 +49,12 @@ const frameElementSchema = mongoose.Schema({
     ref: 'SemType',
     index: true,
   }],
+});
+
+frameElementSchema.index({
+  _id: 1,
+}, {
+  unique: true,
 });
 
 frameElementSchema.index({

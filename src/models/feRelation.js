@@ -6,7 +6,6 @@ mongoose.Promise = bluebird;
 const feRelationSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true,
   },
   subFE: {
     type: Number,
@@ -24,6 +23,13 @@ const feRelationSchema = mongoose.Schema({
     index: true,
   },
 });
+
+feRelationSchema.index({
+  _id: 1,
+}, {
+  unique: true,
+});
+
 feRelationSchema.index({
   frameElements: 1,
 });

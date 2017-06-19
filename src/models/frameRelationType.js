@@ -6,7 +6,6 @@ mongoose.Promise = bluebird;
 const frameRelationTypeSchema = mongoose.Schema({
   _id: {
     type: Number,
-    unique: true,
   },
   name: {
     type: String,
@@ -17,6 +16,12 @@ const frameRelationTypeSchema = mongoose.Schema({
   supFrameName: {
     type: String,
   },
+});
+
+frameRelationTypeSchema.index({
+  _id: 1,
+}, {
+  unique: true,
 });
 
 export default mongoose.model('FrameRelationType', frameRelationTypeSchema);
