@@ -1,6 +1,6 @@
 {
   "name": "noframenet-core",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "A set of core Mongoose models and utils for handling FrameNet data on a MongoDB database",
   "keywords": [
     "FrameNet",
@@ -28,7 +28,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "collections": "^5.0.6",
-    "mongoose": "^4.9.0"
+    "mongoose": "^4.10.7"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
