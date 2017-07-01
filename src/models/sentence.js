@@ -9,7 +9,7 @@ const sentenceSchema = mongoose.Schema({ // eslint-disable-line new-cap
   },
   text: {
     type: String,
-    index: true,
+    text: true,
   },
   paragraphNumber: {
     type: Number,
