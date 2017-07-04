@@ -13,12 +13,6 @@ rules:
   #Allow _id on mongo id attributes and rewire __get__
   no-underscore-dangle: [error, {allow: [_id, __get__]}]
 
-  #Tolerate String extension for hashcode needed for Set
-  no-extend-native: [error, {exceptions: [String]}]
-
-  #Those are not typos and are used for hashcode definition
-  no-bitwise: [error, {allow: ['<<', '|=']}]
-
   #Allow devDependencies for tests
   import/no-extraneous-dependencies: [error, {devDependencies: ['**/*.test.js']}]
 

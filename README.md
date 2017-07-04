@@ -21,6 +21,13 @@ import { Frame } from 'noframenet-core';
 
 const frame = new Frame();
 ```
+Using `require`
+```javascript
+const Frame = require('noframenet-core').Frame;
+
+const frame = new Frame();
+```
+
 ## Models
 `Number` vs. `mongoose.Schema.Types.ObjectId`
 
@@ -32,11 +39,6 @@ _id: {
 }
 ```
 - When ids are not specified in the XML data, models use the default `mongoose.Schema.Types.ObjectId` created on the fly by Mongoose and hence not encoded in the model
-
-## Utils
-NoFrameNet-Core's `Set` extends collectionjs' [FastSet](http://www.collectionsjs.com/fast-set) and defines a custom equals method. Objects are compared by their ids, using:
-- Mongoose ObjectId `.equals()` method if ids are instances of `mongoose.Types.ObjectId`;
-- standard `===` if ids are instances of `Number`.
 
 ## FrameNet Version Compatibility
 NoFrameNet-Core models are compatible with FrameNet version:

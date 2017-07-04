@@ -3,13 +3,13 @@ import bluebird from 'bluebird';
 
 mongoose.Promise = bluebird;
 
-const sentenceSchema = mongoose.Schema({ // eslint-disable-line new-cap
+const sentenceSchema = mongoose.Schema({
   _id: {
     type: Number,
   },
   text: {
     type: String,
-    index: true,
+    text: true,
   },
   paragraphNumber: {
     type: Number,
