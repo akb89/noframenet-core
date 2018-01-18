@@ -2,6 +2,7 @@
 [![NPM version][npm-version-image]][npm-url]
 [![NPM downloads][npm-downloads-image]][npm-url]
 [![Dependencies][david-dep-image]][david-url]
+[![DevDependencies][david-dev-dep-image]][david-dev-url]
 [![MIT License][license-image]][license-url]
 [![FrameNet][framenet-image]][framenet-url]
 
@@ -55,3 +56,5 @@ NoFrameNet-Core models are compatible with FrameNet version:
 [license-url]:LICENSE.txt
 [david-dep-image]: https://david-dm.org/akb89/noframenet-core.svg?style=flat-square
 [david-url]: https://david-dm.org/akb89/noframenet-core
+[david-dev-dep-image]: https://img.shields.io/david/dev/akb89/noframenet-core.svg?style=flat-square
+[david-dev-url]: https://david-dm.org/akb89/noframenet-core?type=dev
