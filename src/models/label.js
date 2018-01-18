@@ -15,10 +15,10 @@ const labelSchema = mongoose.Schema({
   rank: {
     type: Number,
   },
-  startPos: {
+  start: {
     type: Number,
   },
-  endPos: {
+  end: {
     type: Number,
   },
 });
