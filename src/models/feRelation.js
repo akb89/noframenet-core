@@ -24,10 +24,4 @@ const feRelationSchema = mongoose.Schema({
   },
 });
 
-feRelationSchema.index({
-  _id: 1,
-}, {
-  unique: true,
-});
-
 export default mongoose.model('FERelation', feRelationSchema);

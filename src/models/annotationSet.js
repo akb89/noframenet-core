@@ -28,10 +28,4 @@ const annoSetSchema = mongoose.Schema({
   }],
 });
 
-annoSetSchema.index({
-  _id: 1,
-}, {
-  unique: true,
-});
-
 export default mongoose.model('AnnotationSet', annoSetSchema);

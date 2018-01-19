@@ -23,10 +23,5 @@ const semTypeSchema = mongoose.Schema({
 semTypeSchema.index({
   superTypes: 1,
 });
-semTypeSchema.index({
-  _id: 1,
-}, {
-  unique: true,
-});
 
 export default mongoose.model('SemType', semTypeSchema);

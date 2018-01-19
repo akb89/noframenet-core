@@ -53,10 +53,5 @@ lexUnitSchema.index({
 lexUnitSchema.index({
   semTypes: 1,
 });
-lexUnitSchema.index({
-  _id: 1,
-}, {
-  unique: true,
-});
 
 export default mongoose.model('LexUnit', lexUnitSchema);

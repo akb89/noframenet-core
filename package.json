@@ -1,6 +1,6 @@
 {
   "name": "noframenet-core",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "A set of core Mongoose models and utils for handling FrameNet data on a MongoDB database",
   "keywords": [
     "FrameNet",

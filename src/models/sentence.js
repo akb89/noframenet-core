@@ -24,10 +24,4 @@ const sentenceSchema = mongoose.Schema({
   },
 });
 
-sentenceSchema.index({
-  _id: 1,
-}, {
-  unique: true,
-});
-
 export default mongoose.model('Sentence', sentenceSchema);

@@ -23,10 +23,5 @@ const documentSchema = mongoose.Schema({
 documentSchema.index({
   sentences: 1,
 });
-documentSchema.index({
-  _id: 1,
-}, {
-  unique: true,
-});
 
 export default mongoose.model('Document', documentSchema);

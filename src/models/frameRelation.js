@@ -24,10 +24,4 @@ const frameRelationSchema = mongoose.Schema({
   },
 });
 
-frameRelationSchema.index({
-  _id: 1,
-}, {
-  unique: true,
-});
-
 export default mongoose.model('FrameRelation', frameRelationSchema);

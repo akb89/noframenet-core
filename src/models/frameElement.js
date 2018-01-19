@@ -57,10 +57,5 @@ frameElementSchema.index({
 frameElementSchema.index({
   semTypes: 1,
 });
-frameElementSchema.index({
-  _id: 1,
-}, {
-  unique: true,
-});
 
 export default mongoose.model('FrameElement', frameElementSchema);
