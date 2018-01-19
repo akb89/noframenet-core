@@ -1,6 +1,6 @@
 {
   "name": "noframenet-core",
-  "version": "5.0.4",
+  "version": "5.0.5",
   "description": "A set of core Mongoose models and utils for handling FrameNet data on a MongoDB database",
   "keywords": [
     "FrameNet",
@@ -30,6 +30,7 @@
     "mongoose": "^5.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.24.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
