@@ -23,10 +23,5 @@ const corpusSchema = mongoose.Schema({
 corpusSchema.index({
   documents: 1,
 });
-corpusSchema.index({
-  _id: 1,
-}, {
-  unique: true,
-});
 
 export default mongoose.model('Corpus', corpusSchema);
