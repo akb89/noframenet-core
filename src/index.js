@@ -3,6 +3,7 @@ export { default as Corpus } from './models/corpus';
 export { default as Document } from './models/document';
 export { default as Frame } from './models/frame';
 export { default as FrameElement } from './models/frameElement';
+export { default as FEHierarchy } from './models/feHierarchy';
 export { default as FERelation } from './models/feRelation';
 export { default as FrameRelation } from './models/frameRelation';
 export { default as FrameRelationType } from './models/frameRelationType';
