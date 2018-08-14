@@ -17,7 +17,13 @@ const valenceUnitSchema = mongoose.Schema({
     type: String,
     index: true,
   },
+}, {
+  collation: {
+    locale: 'en_US',
+    strength: 1,
+  },
 });
+
 valenceUnitSchema.index({
   FE: 1,
   PT: 1,
@@ -37,4 +43,5 @@ valenceUnitSchema.index({
 }, {
   unique: true,
 });
+
 export default mongoose.model('ValenceUnit', valenceUnitSchema);
