@@ -26,6 +26,9 @@ const annoSetSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Label',
   }],
+  fAnnotation: {
+    type: String,
+  },
 });
 
 export default mongoose.model('AnnotationSet', annoSetSchema);
