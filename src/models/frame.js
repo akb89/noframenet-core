@@ -14,6 +14,9 @@ const frameSchema = mongoose.Schema({
   definition: {
     type: String,
   },
+  fDefinition: {
+    type: String,
+  },
   cBy: {
     type: String,
   },

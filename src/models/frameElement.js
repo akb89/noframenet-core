@@ -14,6 +14,9 @@ const frameElementSchema = mongoose.Schema({
   definition: {
     type: String,
   },
+  fDefinition: {
+    type: String,
+  },
   coreType: {
     type: String,
     index: true,
@@ -28,6 +31,9 @@ const frameElementSchema = mongoose.Schema({
     type: String,
   },
   bgColor: {
+    type: String,
+  },
+  color: {
     type: String,
   },
   abbrev: {
