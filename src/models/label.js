@@ -21,6 +21,11 @@ const labelSchema = mongoose.Schema({
   end: {
     type: Number,
   },
+}, {
+  collation: {
+    locale: 'en_US',
+    strength: 1,
+  },
 });
 
 export default mongoose.model('Label', labelSchema);

@@ -22,6 +22,11 @@ const lexemeSchema = mongoose.Schema({
   breakBefore: {
     type: String,
   },
+}, {
+  collation: {
+    locale: 'en_US',
+    strength: 1,
+  },
 });
 
 export default mongoose.model('Lexeme', lexemeSchema);

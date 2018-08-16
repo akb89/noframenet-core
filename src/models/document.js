@@ -18,6 +18,11 @@ const documentSchema = mongoose.Schema({
     type: Number,
     ref: 'Sentence',
   }],
+}, {
+  collation: {
+    locale: 'en_US',
+    strength: 1,
+  },
 });
 
 documentSchema.index({

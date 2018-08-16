@@ -22,6 +22,11 @@ const sentenceSchema = mongoose.Schema({
   aPos: {
     type: Number,
   },
+}, {
+  collation: {
+    locale: 'en_US',
+    strength: 1,
+  },
 });
 
 export default mongoose.model('Sentence', sentenceSchema);

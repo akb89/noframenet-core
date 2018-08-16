@@ -14,6 +14,11 @@ const frameHierarchySchema = mongoose.Schema({
   children: [{
     type: mongoose.Schema.Types.Mixed,
   }],
+}, {
+  collation: {
+    locale: 'en_US',
+    strength: 1,
+  },
 });
 
 export default mongoose.model('FrameHierarchy', frameHierarchySchema);
