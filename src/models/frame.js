@@ -41,6 +41,11 @@ const frameSchema = mongoose.Schema({
     type: Number,
     ref: 'SemType',
   }],
+}, {
+  collation: {
+    locale: 'en_US',
+    strength: 1,
+  },
 });
 
 frameSchema.index({

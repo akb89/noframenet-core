@@ -18,6 +18,11 @@ const corpusSchema = mongoose.Schema({
     type: Number,
     ref: 'Document',
   }],
+}, {
+  collation: {
+    locale: 'en_US',
+    strength: 1,
+  },
 });
 
 corpusSchema.index({

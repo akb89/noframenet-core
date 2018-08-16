@@ -19,6 +19,11 @@ const frameRelationTypeSchema = mongoose.Schema({
     type: String,
     index: true,
   },
+}, {
+  collation: {
+    locale: 'en_US',
+    strength: 1,
+  },
 });
 
 export default mongoose.model('FrameRelationType', frameRelationTypeSchema);
